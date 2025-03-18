@@ -11,6 +11,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onUpload }) => {
         type="file"
         id="file-upload"
         onChange={onUpload}
+        multiple
         style={{ display: "none" }}
       />
       <label htmlFor="file-upload" className="custom-file-upload">
