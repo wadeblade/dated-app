@@ -1,16 +1,17 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import "./index.css";
 
-function App() {
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Gallery from './components/Gallery';
+
+const App: React.FC = () => {
   return (
-    <div className="main-wrapper">
-      <Header />
-      <Main></Main>
-      <Footer></Footer>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/gallery" element={<Gallery />} />
+    </Routes>
   );
-}
+};
 
 export default App;
+

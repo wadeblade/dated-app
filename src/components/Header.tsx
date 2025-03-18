@@ -15,7 +15,7 @@ const Header = () => {
       </div>
       <div className="header-dated-time">
         <p className="header-dated-time-text">
-          <time dateTime="2025-03-13T17:05:00+02:00">17:05, 13.03.2025</time>
+          <time dateTime="2025-03-18T01:03:00+02:00">01:03, 18.03.2025</time>
         </p>
       </div>
     </header>

@@ -11,7 +11,7 @@ interface TimeData {
 
 const Main: React.FC = () => {
   // Визначена дата: 13 березня 2025, 17:05 (UTC+02:00)
-  const startDate = new Date("2025-03-13T17:05:00+02:00");
+  const startDate = new Date("2025-03-18T01:03:00+02:00");
 
   const [timeData, setTimeData] = useState<TimeData>({
     days: 0,

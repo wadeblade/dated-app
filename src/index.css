@@ -95,6 +95,118 @@ body {
   margin-top: auto;
 }
 
+/* Базові стилі для галереї */
+.gallery {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.gallery-heading {
+  text-align: center;
+  font-family: "Rock Salt", cursive;
+  font-size: 30px;
+}
+
+/* Стилі для елементів галереї */
+.photo-item {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Кнопка видалення */
+.photo-item button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.photo-item button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Приховуємо стандартний input */
+input[type="file"] {
+  display: none;
+}
+
+/* Стилізація для мітки, яка виглядає як кнопка */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px dashed pink;
+  border-radius: 8px;
+  background-color: white;
+  color: pink;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-file-upload:hover {
+  color: white;
+  background-color: pink;
+  border-color: white;
+}
+
+/* Стилізація для відображення імені файлу */
+#file-name {
+  margin-top: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #a64dff;
+}
+
+.choose-files-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Стилізація лінка як кнопки */
+.link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff; /* Білий фон */
+  color: pink; /* Синій колір тексту */
+  text-decoration: none; /* Видаляє підкреслення */
+  border: 2px solid pink; /* Синя обводка */
+  border-radius: 5px; /* Округлені кути */
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.link-button:hover {
+  background-color: pink; /* Синій фон при наведенні */
+  color: #ffffff; /* Білий текст при наведенні */
+}
+
+.link-button:active {
+  background-color: pink; /* Темніший синій фон при натисканні */
+  border-color: pink; /* Темніша обводка при натисканні */
+}
+
 /* Медіа-запити для планшетів */
 @media (max-width: 1024px) {
   .header {
@@ -140,5 +252,36 @@ body {
   }
   .footer {
     font-size: 14px;
+  }
+}
+
+/* Адаптивні стилі для різних розмірів екранів */
+@media (min-width: 1025px) {
+  .gallery {
+    grid-template-columns: repeat(5, 200px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-heading {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 767px) {
+  .gallery {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media (max-width: 425px) {
+  .gallery {
+    grid-template-columns: repeat(1, 200px);
   }
 }
